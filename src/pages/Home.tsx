@@ -25,11 +25,15 @@ export function Home() {
   function handleToggleTaskDone(id: number) {
     const newTasks = [...tasks]
     
-    newTasks.forEach(task => {
+    newTasks.find(task => {
       if(task.id === id){
-        task.done = !task.done
-      }
-    })
+        task.done=!task.done;
+      }})
+    // newTasks.forEach(task => {
+    //   if(task.id === id){
+    //     task.done = !task.done
+    //   }
+    // })
 
     setTasks(newTasks)
   }
